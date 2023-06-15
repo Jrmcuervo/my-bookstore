@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {
-  BrowserRouter as Router, Routes, Route, Link,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
 } from 'react-router-dom';
+import { addBook, removeBook } from './redux/books/booksSlice';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 import CategoriesPage from './components/CategoriesPage';
 
 function App() {
-  const [books, setBooks] = useState([]);
+  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
   const handleAdd = (newBook) => {
-    const bookId = { ...newBook, id: Date.now() };
-    setBooks([...books, bookId]);
+    dispatch(addBook(newBook));
   };
 
   const handleDelete = (bookId) => {
-    const deletedBooks = books.filter((book) => book.id !== bookId);
-    setBooks(deletedBooks);
+    dispatch(removeBook(bookId));
   };
 
   return (
