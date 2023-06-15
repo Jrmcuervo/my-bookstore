@@ -25,7 +25,7 @@ Welcome to my bookstore project
 
 # 📖 my bookstore! <a name="about-project"></a>
 
-**my bookstore!** This project is to learn the basics of react, by creating a bookstore.
+**my bookstore!** This project is to learn the basics of react and redux, by creating a bookstore.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -41,17 +41,17 @@ Welcome to my bookstore project
 
 ### Key Features <a name="key-features"></a>
 
-- **A project to learn how to use react**
+- **A project to learn how to use react and redux**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
 **The live demo will be updated as soon as the page is displayed**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 
@@ -87,6 +87,10 @@ Welcome to my bookstore project
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Updates will be made shortly to make the page interactive**
+- [ ] **In the next step Im going to fetch data from an API**
+- [ ] **Later Im going to give some awesome styles to the page**
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

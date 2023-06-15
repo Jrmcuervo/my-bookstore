@@ -1,20 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const initialState = [
+const initialState = [
   {
-    item_id: 'item1',
+    id: Date.now(),
     title: 'The Great Gatsby',
     author: 'John Smith',
     category: 'Fiction',
   },
   {
-    item_id: 'item2',
+    id: Date.now() + 1,
     title: 'Anna Karenina',
     author: 'Leo Tolstoy',
     category: 'Fiction',
   },
   {
-    item_id: 'item3',
+    id: Date.now() + 2,
     title: 'The Selfish Gene',
     author: 'Richard Dawkins',
     category: 'Nonfiction',
@@ -26,7 +26,11 @@ const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, action) => {
-      state.push(action.payload);
+      const newBook = {
+        id: Date.now(),
+        ...action.payload,
+      };
+      state.push(newBook);
     },
     removeBook: (state, action) => {
       const bookIndex = state.findIndex((book) => book.id === action.payload);
