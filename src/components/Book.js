@@ -1,30 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book, onDelete }) => {
-  const handleDelete = () => {
-    onDelete(book.id);
-  };
+function Book(props) {
+  const {
+    title, author, handleDelete,
+  } = props;
 
   return (
     <div>
-      <h3>{book.title}</h3>
+      <h3>{title}</h3>
       <p>
         Author:
-        {book.author}
+        {' '}
+        {author}
       </p>
-      <button type="button" onClick={handleDelete}>Delete</button>
+      <button type="button" onClick={handleDelete}>Remove</button>
     </div>
   );
-};
+}
 
 Book.propTypes = {
-  book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  }).isRequired,
-  onDelete: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  handleDelete: PropTypes.func.isRequired,
+
+};
+
+Book.defaultProps = {
+  title: '',
+  author: '',
 };
 
 export default Book;
