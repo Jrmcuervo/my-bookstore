@@ -1,35 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
+import { fetchBooks, removeBook } from '../redux/books/booksSlice';
 
-const BookList = ({ books, onDelete }) => {
-  const handleDelete = (bookId) => {
-    onDelete(bookId);
+function BookList() {
+  const dispatch = useDispatch();
+  const books = useSelector((state) => Object.values(state.books).flat());
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  const handleDelete = (id) => {
+    dispatch(removeBook(id));
   };
 
   return (
     <div>
-      <h2>My collection</h2>
-      {books.map((book) => (
+      <h2>Our Book List</h2>
+      {Array.isArray(books) && books.map((book) => (
         <Book
-          key={book.id}
-          book={book}
-          onDelete={handleDelete}
+          key={book.item_id}
+          title={book.title}
+          author={book.author}
+          category={book.category}
+          id={book.item_id !== undefined ? book.item_id : ''}
+          handleDelete={() => handleDelete(book.item_id)}
         />
       ))}
     </div>
   );
-};
-
-BookList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
+}
 
 export default BookList;

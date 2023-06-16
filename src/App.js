@@ -1,31 +1,18 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link,
 } from 'react-router-dom';
-import { addBook, removeBook } from './redux/books/booksSlice';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 import CategoriesPage from './components/CategoriesPage';
 
 function App() {
-  const books = useSelector((state) => state.books);
-  const dispatch = useDispatch();
-
-  const handleAdd = (newBook) => {
-    dispatch(addBook(newBook));
-  };
-
-  const handleDelete = (bookId) => {
-    dispatch(removeBook(bookId));
-  };
-
   return (
     <Router>
-      <div className="main">
+      <div className="app">
         <nav>
           <ul>
             <li>
@@ -42,8 +29,8 @@ function App() {
             element={(
               <div>
                 <h1>Bookstore CMS</h1>
-                <BookList books={books} onDelete={handleDelete} />
-                <BookForm onAdd={handleAdd} />
+                <BookList />
+                <BookForm />
               </div>
             )}
           />
