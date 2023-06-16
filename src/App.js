@@ -8,18 +8,25 @@ import {
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 import CategoriesPage from './components/CategoriesPage';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div className="main-conteiner">
         <nav>
-          <ul>
+          <ul className="header-main">
             <li>
-              <Link to="/">Books</Link>
+              <h1 className="header-title">BookStore CMS</h1>
             </li>
             <li>
-              <Link to="/categories">Categories</Link>
+              <Link to="/">BOOKS</Link>
+            </li>
+            <li>
+              <Link to="/categories">CATEGORIES</Link>
+            </li>
+            <li className="header-icon">
+              <img src="user.png" alt="user icon" />
             </li>
           </ul>
         </nav>
@@ -28,7 +35,6 @@ function App() {
             path="/"
             element={(
               <div>
-                <h1>Bookstore CMS</h1>
                 <BookList />
                 <BookForm />
               </div>
