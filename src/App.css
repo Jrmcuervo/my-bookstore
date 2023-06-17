@@ -3,6 +3,29 @@
   --text-color: #121212;
   --background-color: #fcfcfc;
   --border-color: #e8e8e8;
+  --font-family: "Montserrat", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.375rem;
+  --font-weight-light: 300;
+  --font-weight-bold: 700;
+  --color-primary: var(--primary-color);
+  --color-text: var(--text-color);
+  --color-white: #fff;
+  --color-lightgray: lightgray;
+  --background-white: #fbfbfb;
+  --background-primary: var(--primary-color);
+  --border-color-light: var(--border-color);
+  --border-color-dark: #888;
+  --border-radius-small: 4px;
+  --border-radius-medium: 7px;
+  --padding-small: 12px;
+  --padding-medium: 30px;
+  --padding-large: 32px;
+  --letter-spacing-small: -0.15px;
+  --letter-spacing-medium: -0.18px;
+  --letter-spacing-large: -0.2px;
+  --cursor-pointer: pointer;
 }
 
 * {
@@ -17,7 +40,7 @@ body {
 #root {
   margin: 5% 4%;
   display: flex;
-  background-color: #fbfbfb;
+  background-color: var(--background-white);
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -27,7 +50,7 @@ body {
 
 .main-conteiner nav {
   width: 100%;
-  background: white;
+  background: var(--color-white);
   border-bottom: 1px solid var(--border-color);
   height: 85px;
   margin-top: -14px;
@@ -49,26 +72,26 @@ body {
 
 .header-icon img {
   border: 1px solid var(--border-color);
-  border-radius: 34px;
-  cursor: pointer;
+  border-radius: var(--border-radius-medium);
+  cursor: var(--cursor-pointer);
   padding: 8px;
   width: 44px;
 }
 
 .header-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
   padding-left: 5%;
   white-space: nowrap;
 }
 
 .header-main a {
   opacity: 1;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.813rem;
-  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  color: var(--color-text);
   letter-spacing: 1.9px;
   text-decoration: none;
 }
@@ -87,45 +110,45 @@ form {
 }
 
 .form-main {
-  padding: 30px;
+  padding: var(--padding-medium);
 }
 
 .form-main h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.18px;
-  color: #888;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-medium);
+  color: var(--color-dark);
 }
 
 #title,
 #author {
-  padding: 12px;
-  border-radius: 4px;
+  padding: var(--padding-small);
+  border-radius: var(--border-radius-small);
   border: 1px solid var(--border-color);
-  background-color: #fff;
-  font-size: 1rem;
-  letter-spacing: -0.15px;
-  color: var(--text-color);
+  background-color: var(--color-white);
+  font-size: var(--font-size-medium);
+  letter-spacing: var(--letter-spacing-small);
+  color: var(--color-text);
   width: 22rem;
 }
 
 #title::placeholder,
 #author::placeholder {
   opacity: 0.5;
-  color: #121212;
+  color: var(--text-color);
 }
 
 .form-main button {
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   width: 20%;
-  padding: 12px;
-  border-radius: 3px;
-  background-color: var(--primary-color);
+  padding: var(--padding-small);
+  border-radius: var(--border-radius-small);
+  background-color: var(--background-primary);
   border: none;
-  letter-spacing: 0.5px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
+  letter-spacing: var(--letter-spacing-small);
+  color: var(--color-white);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
   font-family: "Roboto Slab", serif;
 }
 
@@ -148,11 +171,11 @@ form {
 
 .book-main {
   display: flex;
-  padding: 32px;
-  border: 1px solid lightgray;
-  background: white;
+  padding: var(--padding-large);
+  border: 1px solid var(--color-lightgray);
+  background: var(--color-white);
   height: 180px;
-  border-radius: 7px;
+  border-radius: var(--border-radius-small);
 }
 
 .book-details {
@@ -168,38 +191,38 @@ form {
   font-size: 37px;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  color: var(--text-color);
+  font-family: var(--font-family);
+  color: var(--color-text);
 }
 
 .book-percentage p:last-child {
-  font-size: 0.875rem;
+  font-size: var(--font-size-small);
   opacity: 0.5;
   margin: 0;
 }
 
 .book-details p:first-child {
-  font-weight: 700;
-  color: var(--text-color);
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
   opacity: 0.5;
   margin: 1px;
 }
 
 .book-details h3 {
-  font-size: 1.375rem;
-  letter-spacing: -0.2px;
-  font-weight: 700;
-  color: var(--text-color);
+  font-size: var(--font-size-large);
+  letter-spacing: var(--letter-spacing-large);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
   margin: 1px;
   font-family: "Roboto Slab", serif;
 }
 
 .book-details-text {
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: #0290ff;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-light);
+  color: var(--primary-color);
   font-family: "Roboto Slab", serif;
 }
 
@@ -221,9 +244,9 @@ form {
   background-color: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 0.875rem;
-  font-weight: 300;
-  cursor: pointer;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-light);
+  cursor: var(--cursor-pointer);
 }
 
 .book-hr {
@@ -233,22 +256,22 @@ form {
 
 .book-chapter p:first-child {
   font-family: "Roboto Slab", serif;
-  font-weight: 300;
-  color: var(--text-color);
-  font-size: 0.813rem;
+  font-weight: var(--font-weight-light);
+  color: var(--color-text);
+  font-size: var(--font-size-small);
   opacity: 0.5;
   margin-top: 0.438rem;
   letter-spacing: -0.4px;
 }
 
 .book-chapter button {
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   border: none;
-  background-color: var(--primary-color);
-  border-radius: 3px;
+  background-color: var(--background-primary);
+  border-radius: var(--border-radius-small);
   padding: 8px 24px;
   font-family: "Roboto Slab", serif;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  color: #fff;
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing-small);
+  color: var(--color-white);
 }
