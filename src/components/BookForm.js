@@ -22,15 +22,15 @@ function BookForm() {
   };
 
   return (
-    <div>
+    <div className="form-main">
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="title-input">
-            Book Title:
+          <label htmlFor="title">
             <input
+              placeholder="Book title"
               type="text"
-              id="title-input"
+              id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
@@ -38,11 +38,11 @@ function BookForm() {
           </label>
         </div>
         <div>
-          <label htmlFor="author-input">
-            Author:
+          <label htmlFor="author">
             <input
+              placeholder="Author"
               type="text"
-              id="author-input"
+              id="author"
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
               required

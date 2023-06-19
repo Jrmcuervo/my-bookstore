@@ -7,14 +7,38 @@ function Book(props) {
   } = props;
 
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>
-        Author:
-        {' '}
-        {author}
-      </p>
-      <button type="button" onClick={handleDelete}>Remove</button>
+    <div className="book-main">
+      <div className="book-details">
+        <h3>{title}</h3>
+        <p className="book-details-text">
+          {' '}
+          {author}
+        </p>
+        <div className="book-buttons">
+          <button type="button">Comments</button>
+          <hr />
+          <button type="button" onClick={handleDelete}>Remove</button>
+          <hr />
+          <button type="button">Edit</button>
+        </div>
+      </div>
+      <div>
+        <div className="book-progress" />
+      </div>
+      <div className="book-percentage">
+        <p>8%</p>
+        <p>Completed</p>
+      </div>
+      <hr className="book-hr" />
+      <div className="book-chapter">
+        <p>
+          CURRENT CHAPTER
+        </p>
+        <p>
+          Chapter 2
+        </p>
+        <button type="button">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 }

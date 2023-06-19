@@ -8,18 +8,31 @@ import {
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 import CategoriesPage from './components/CategoriesPage';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div className="main-conteiner">
+        <head>
+          <meta property="og:title" content="My bookstore" />
+          <meta name="og:description" content="This is my bookstore" />
+          <meta property="og:image" content="https://user-images.githubusercontent.com/108334376/239553035-99314030-d733-476b-b4dc-b18d8969e320.png" />
+          <meta property="og:url" content="https://github.com/Jrmcuervo/my-bookstore" />
+        </head>
         <nav>
-          <ul>
+          <ul className="header-main">
             <li>
-              <Link to="/">Books</Link>
+              <h1 className="header-title">BookStore CMS</h1>
             </li>
             <li>
-              <Link to="/categories">Categories</Link>
+              <Link to="/">BOOKS</Link>
+            </li>
+            <li>
+              <Link to="/categories">CATEGORIES</Link>
+            </li>
+            <li className="header-icon">
+              <img src="user.png" alt="user icon" />
             </li>
           </ul>
         </nav>
@@ -28,7 +41,6 @@ function App() {
             path="/"
             element={(
               <div>
-                <h1>Bookstore CMS</h1>
                 <BookList />
                 <BookForm />
               </div>

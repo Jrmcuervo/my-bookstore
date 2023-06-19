@@ -16,8 +16,7 @@ function BookList() {
   };
 
   return (
-    <div>
-      <h2>Our Book List</h2>
+    <div className="book-collection">
       {Array.isArray(books) && books.map((book) => (
         <Book
           key={book.item_id}
