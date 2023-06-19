@@ -14,6 +14,12 @@ function App() {
   return (
     <Router>
       <div className="main-conteiner">
+        <head>
+          <meta property="og:title" content="My bookstore" />
+          <meta name="og:description" content="This is my bookstore" />
+          <meta property="og:image" content="https://user-images.githubusercontent.com/108334376/239553035-99314030-d733-476b-b4dc-b18d8969e320.png" />
+          <meta property="og:url" content="https://github.com/Jrmcuervo/my-bookstore" />
+        </head>
         <nav>
           <ul className="header-main">
             <li>
