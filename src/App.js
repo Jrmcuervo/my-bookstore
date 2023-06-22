@@ -17,7 +17,7 @@ function App() {
         <head>
           <meta property="og:title" content="My bookstore" />
           <meta name="og:description" content="This is my bookstore" />
-          <meta property="og:image" content="https://user-images.githubusercontent.com/108334376/239553035-99314030-d733-476b-b4dc-b18d8969e320.png" />
+          <meta property="og:image" content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Feapenzacharias%2Fbookstore&psig=AOvVaw242NLyHMVNfoP3v4AqM7sT&ust=1687549633530000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPigz7bS1_8CFQAAAAAdAAAAABAE" />
           <meta property="og:url" content="https://github.com/Jrmcuervo/my-bookstore" />
         </head>
         <nav>
